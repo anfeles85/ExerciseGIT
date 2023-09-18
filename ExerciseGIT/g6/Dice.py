@@ -3,6 +3,7 @@
     Autor: Ximena Quintana
            Sebastian Varela Villegas
            Laura Sanchez
+           Samuel Montoya Mayor
     Objetivo: juego del dado implementando la libreria random. El juego termina cuando el jugador saca 6 en el dado. 
     Después de cada jugada el programa debe preguntarle al jugador si quiere volver a tirar el dado. Si dice que no el juego
     termina, si dice que si se vuelve a ejecutar el dado.
