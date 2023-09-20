@@ -1,6 +1,6 @@
 """
     Fecha: 17/09/2023
-    Autor: afescobarv
+    Autor: Daniel bedoya - juan rojas
     Objetivo: juego del dado implementando la libreria random. El juego termina cuando el jugador saca 6 en el dado. 
     Después de cada jugada el programa debe preguntarle al jugador si quiere volver a tirar el dado. Si dice que no el juego
     termina, si dice que si se vuelve a ejecutar el dado.
@@ -11,5 +11,32 @@
 
 import random
 
-dice = random.randint(0, 6)
-print(dice)
+option = int(input("Desea volver a tirar 1. Si 2. NO : "))
+
+
+while option == 1: 
+    
+    dice = random.randint(1,6)
+    print(dice)
+    if dice == 6 : 
+        print("Fin de Juego ")
+        option = 2
+    else : 
+        option = int(input("Desea volver a tirar \n1 . Si \n2. NO : "))
+
+print ("Fin del juego ")
+
+
+
+
+
+
+ 
+ 
+   
+
+
+
+
+
+    
