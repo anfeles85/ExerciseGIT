@@ -4,17 +4,52 @@
  */
 package co.edu.sena.exercisegit.g6;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author anfeles
  */
 public class JFrameApprentice extends javax.swing.JFrame {
-
-    /**
+     
+    
+    private Apprentice[] names = new Apprentice[3];
+    /** 
      * Creates new form JFrameApprentice
      */
     public JFrameApprentice() {
         initComponents();
+        fullNames();
+    }
+    
+    public void fullNames(){
+        Apprentice apprentice = new Apprentice();
+        apprentice.setFullname("Juan Pablo Giraldo Ramirez");
+        apprentice.setAge(18);
+        apprentice.setPhone(564676);
+        names[0] = apprentice;
+        
+        
+        apprentice = new Apprentice();
+        apprentice.setFullname("Juan Jose Arenas Izquierdo");
+        apprentice.setAge(20);
+        apprentice.setPhone(96787);
+        names[1] = apprentice;
+        
+        
+        apprentice = new Apprentice();
+        apprentice.setFullname("Jhon Edinson Zuluaga Bedoya");
+        apprentice.setAge(18);
+        apprentice.setPhone(983434);
+        names[2] = apprentice;
+        
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        jComboBoxListApprentice.setModel(model);
+        
+        for (Apprentice name : names) {
+            model.addElement(name);
+        }
     }
 
     /**
@@ -26,39 +61,58 @@ public class JFrameApprentice extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabelApprentice = new javax.swing.JLabel();
         jComboBoxListApprentice = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
+
+        jLabelApprentice.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jLabelApprentice.setForeground(new java.awt.Color(0, 0, 0));
         jLabelApprentice.setText("Aprendices");
 
-        jComboBoxListApprentice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jhon Zuluaga", "Juan Jose Arenas", "Juan Pablo", " " }));
+        jComboBoxListApprentice.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jComboBoxListApprentice.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxListApprentice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelApprentice)
+                .addGap(190, 190, 190))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(jComboBoxListApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabelApprentice)
+                .addGap(36, 36, 36)
+                .addComponent(jComboBoxListApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(133, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBoxListApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabelApprentice)))
-                .addContainerGap(135, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabelApprentice)
-                .addGap(49, 49, 49)
-                .addComponent(jComboBoxListApprentice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(182, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -99,5 +153,6 @@ public class JFrameApprentice extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBoxListApprentice;
     private javax.swing.JLabel jLabelApprentice;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
