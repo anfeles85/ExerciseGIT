@@ -17,18 +17,18 @@ public class Apprentice {
     public Apprentice() {
     }
 
-    public Apprentice(String fulname, int age, int phone) {
-        this.fullname = fulname;
+    public Apprentice(String fullname, int age, int phone) {
+        this.fullname = fullname;
         this.age = age;
         this.phone = phone;
     }
 
-    public String getFulname() {
+    public String getFullname() {
         return fullname;
     }
 
-    public void setFulname(String fulname) {
-        this.fullname = fulname;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public int getAge() {
