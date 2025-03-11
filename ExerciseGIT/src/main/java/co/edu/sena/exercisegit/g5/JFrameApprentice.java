@@ -4,9 +4,17 @@
  */
 package co.edu.sena.exercisegit.g5;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+
 /**
+ * Date: 11/03/2025
  *
- * @author anfeles
+ * @author grupo 5 objective: deberầ crear un nuevo JFrame llamado
+ * JFrameApprentice, el cual contenga un jlabel con el titulo "Aprendices:" y un
+ * jcombo. En el código deberá crear un List de Apprentices, cree 3 aprendices
+ * (los del grupo) y adiciónelos en esta lista.
  */
 public class JFrameApprentice extends javax.swing.JFrame {
 
@@ -15,6 +23,7 @@ public class JFrameApprentice extends javax.swing.JFrame {
      */
     public JFrameApprentice() {
         initComponents();
+        fillList();
     }
 
     /**
@@ -26,20 +35,57 @@ public class JFrameApprentice extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabelTitle = new javax.swing.JLabel();
+        jComboBoxApprentices = new javax.swing.JComboBox<>();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Aprendices");
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 51));
+
+        jLabelTitle.setBackground(new java.awt.Color(51, 51, 51));
+        jLabelTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelTitle.setForeground(new java.awt.Color(51, 51, 51));
+        jLabelTitle.setText("APRENDICES");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jComboBoxApprentices, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(jLabelTitle)))
+                .addContainerGap(108, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabelTitle)
+                .addGap(30, 30, 30)
+                .addComponent(jComboBoxApprentices, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -77,6 +123,23 @@ public class JFrameApprentice extends javax.swing.JFrame {
         });
     }
 
+    public void fillList() {
+        List<Apprentice> apprentices = new ArrayList<>();
+        apprentices.add(new Apprentice("Juan Diego", 18, 31727045));
+        apprentices.add(new Apprentice("Esteban Colorado", 20, 3185740));
+        apprentices.add(new Apprentice("Nicolle Melendez", 18, 3154788));
+
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (Apprentice apprentice : apprentices) {
+            model.addElement(apprentice);
+        }
+
+        jComboBoxApprentices.setModel(model);
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBoxApprentices;
+    private javax.swing.JLabel jLabelTitle;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
