@@ -16,7 +16,7 @@ public class Apprentice {
     private int age;
     private int phone;
 
-    public Apprentice(String sebastian_Rojas) {
+    public Apprentice() {
     }
 
     public Apprentice(String fullname, int age, int phone) {
