@@ -138,11 +138,8 @@ public class JFrameApprentice extends javax.swing.JFrame {
         jComboBoxApprendice.setModel(model);
     }
     
-    public class MainApp {
-    public static void main(String[] args) {
-        new JFrameApprentice().setVisible(true);
-    }
-}
+   
+
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
