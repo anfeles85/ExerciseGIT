@@ -16,7 +16,7 @@ public class Apprentice {
     private int age;
     private int phone;
 
-    public Apprentice() {
+    public Apprentice(String sebastian_Rojas) {
     }
 
     public Apprentice(String fullname, int age, int phone) {
@@ -56,6 +56,10 @@ public class Apprentice {
     @Override
     public String toString() {
         return fullname;
+    }
+
+    String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

@@ -17,18 +17,6 @@ public class JFrameApprentice extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JFrameApprentice(String Apprentice) {
-        this.Apprentice = Apprentice;
-    }
-
-    public String getApprentice() {
-        return Apprentice;
-    }
-
-    public void setApprentice(String Apprentice) {
-        this.Apprentice = Apprentice;
-    }
-    String Apprentice;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -82,9 +70,7 @@ public class JFrameApprentice extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
-    
-    
-    
+
     /**
      * @param args the command line arguments
      */
@@ -111,16 +97,7 @@ public class JFrameApprentice extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(JFrameApprentice.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        Apprentice[] apprentices = new Apprentice[3];
-        apprentices[0] = new Apprentice("Sebastian Rojas");
-        apprentices[1] = new Apprentice("Tatiana Carvajal");
-        apprentices[2] = new Apprentice("Fernando Velasquez");
-        
-        
-        String[] apprenticeNames = new String[apprentices.length];
-        for (int i = 0; i < apprentices.length; i++) {
-            apprenticeNames[i] = apprentices[i].getName();
-        }
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -128,6 +105,13 @@ public class JFrameApprentice extends javax.swing.JFrame {
             }
         });
     }
+        private void loadApprentices() {
+        // Crear lista de aprendices
+        Apprentice[] apprentices = new Apprentice[3];
+        apprentices[0] = new Apprentice("Sebastian Rojas");
+        apprentices[1] = new Apprentice("Tatiana Carvajal");
+        apprentices[2] = new Apprentice("Fernando Velasquez");
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
