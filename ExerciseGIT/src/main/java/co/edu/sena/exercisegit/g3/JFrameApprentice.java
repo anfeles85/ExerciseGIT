@@ -6,6 +6,7 @@ package co.edu.sena.exercisegit.g3;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  *
@@ -17,7 +18,8 @@ public class JFrameApprentice extends javax.swing.JFrame {
      * Creates new form JFrameApprentice
      */
     public JFrameApprentice() {
-        initComponents();   
+        initComponents(); 
+        fillList();
     }
      
     /**
@@ -35,6 +37,9 @@ public class JFrameApprentice extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        Apprentices.setForeground(new java.awt.Color(255, 255, 255));
         Apprentices.setText("Aprendices:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -70,6 +75,7 @@ public class JFrameApprentice extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     public void fillList() {
@@ -78,7 +84,12 @@ public class JFrameApprentice extends javax.swing.JFrame {
         apprentices.add("Sebastian Rodriguez");
         apprentices.add("Alejandro Saya");
         apprentices.add("Lina Salcedo");
-
+        
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (String apprentice : apprentices) {
+            model.addElement(apprentice);
+        }
+        jComboApprentices.setModel(model);
     }
     /**
      * @param args the command line arguments
