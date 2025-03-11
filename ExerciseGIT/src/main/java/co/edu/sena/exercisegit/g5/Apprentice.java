@@ -50,6 +50,4 @@ public class Apprentice {
     public String toString() {
         return "Apprentice: " + "fullname: " + fullname ;
     }
-
-    
 }
