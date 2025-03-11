@@ -9,11 +9,11 @@ import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 
 /**
- *Date: 11/03/2025
- * @author grupo 5
- * objective: deberầ crear un nuevo JFrame llamado JFrameApprentice,
- * el cual contenga un jlabel con el titulo "Aprendices:" y un jcombo. 
- * En el código deberá crear un List de Apprentices, cree 3 aprendices 
+ * Date: 11/03/2025
+ *
+ * @author grupo 5 objective: deberầ crear un nuevo JFrame llamado
+ * JFrameApprentice, el cual contenga un jlabel con el titulo "Aprendices:" y un
+ * jcombo. En el código deberá crear un List de Apprentices, cree 3 aprendices
  * (los del grupo) y adiciónelos en esta lista.
  */
 public class JFrameApprentice extends javax.swing.JFrame {
@@ -124,22 +124,16 @@ public class JFrameApprentice extends javax.swing.JFrame {
     }
 
     public void fillList() {
-        Apprentice apprentice1 = new Apprentice("Juan Diego", 18, 31727045);
-        Apprentice apprentice2 = new Apprentice("Esteban Colorado", 20, 3185740);
-        Apprentice apprentice3 = new Apprentice("Nicolle Melendez", 18, 3154788);
-        
-        
-        List<String> apprentices = new ArrayList<>();
-
-        apprentices.add(apprentice1.toString());
-        apprentices.add(apprentice2.toString());
-        apprentices.add(apprentice3.toString());
+        List<Apprentice> apprentices = new ArrayList<>();
+        apprentices.add(new Apprentice("Juan Diego", 18, 31727045));
+        apprentices.add(new Apprentice("Esteban Colorado", 20, 3185740));
+        apprentices.add(new Apprentice("Nicolle Melendez", 18, 3154788));
 
         DefaultComboBoxModel model = new DefaultComboBoxModel();
-        for (String apprentice : apprentices) {
+        for (Apprentice apprentice : apprentices) {
             model.addElement(apprentice);
         }
-        
+
         jComboBoxApprentices.setModel(model);
     }
 
