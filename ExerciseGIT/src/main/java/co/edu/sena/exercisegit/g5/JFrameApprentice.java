@@ -124,11 +124,16 @@ public class JFrameApprentice extends javax.swing.JFrame {
     }
 
     public void fillList() {
+        Apprentice apprentice1 = new Apprentice("Juan Diego", 18, 31727045);
+        Apprentice apprentice2 = new Apprentice("Esteban Colorado", 20, 3185740);
+        Apprentice apprentice3 = new Apprentice("Nicolle Melendez", 18, 3154788);
+        
+        
         List<String> apprentices = new ArrayList<>();
 
-        apprentices.add("Juan Diego");
-        apprentices.add("Nicolle Vanessa");
-        apprentices.add("Esteban Colorado");
+        apprentices.add(apprentice1.toString());
+        apprentices.add(apprentice2.toString());
+        apprentices.add(apprentice3.toString());
 
         DefaultComboBoxModel model = new DefaultComboBoxModel();
         for (String apprentice : apprentices) {
