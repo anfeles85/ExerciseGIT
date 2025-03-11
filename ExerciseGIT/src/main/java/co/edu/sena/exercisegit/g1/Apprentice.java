@@ -9,5 +9,50 @@ package co.edu.sena.exercisegit.g1;
  * @author anfeles
  */
 public class Apprentice {
+
+    private String fulname;
+    private int age;
+    private int phone;
+    
+    public Apprentice() {
+    }
+
+    public Apprentice(String fulname, int age, int phone) {
+        this.fulname = fulname;
+        this.age = age;
+        this.phone = phone;
+    }
+
+    public String getFulname() {
+        return fulname;
+    }
+
+    public void setFulname(String fulname) {
+        this.fulname = fulname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return fulname;
+    }
+    
+    
+    
     
 }
