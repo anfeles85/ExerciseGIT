@@ -4,6 +4,10 @@
  */
 package co.edu.sena.exercisegit.g1;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+
 
 
 /**
@@ -28,17 +32,32 @@ public class JFrameApprentice extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabelApprendice = new javax.swing.JLabel();
+        jComboBoxApprendice = new javax.swing.JComboBox<>();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabelApprendice.setText("Aprendices:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBoxApprendice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelApprendice))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabelApprendice)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBoxApprendice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(205, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,7 +97,24 @@ public class JFrameApprentice extends javax.swing.JFrame {
             }
         });
     }
-
+    public void fillList(){
+        List<Apprentice> apprentices = new ArrayList<>();
+        apprentices.add(new Apprentice("Danna Marulanda", 18, 125));
+        apprentices.add(new Apprentice("Brahian Quintero", 1, 125));
+        apprentices.add(new Apprentice("Nicolas Palacios", 18, 125));
+        
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        for (Apprentice apprentice : apprentices) {
+            model.addElement(apprentices);
+        }
+        
+        jComboBoxApprendice.setModel(model);
+    }
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBoxApprendice;
+    private javax.swing.JLabel jLabelApprendice;
     // End of variables declaration//GEN-END:variables
 }

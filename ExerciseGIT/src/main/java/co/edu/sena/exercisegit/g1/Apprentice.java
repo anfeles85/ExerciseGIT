@@ -10,7 +10,7 @@ package co.edu.sena.exercisegit.g1;
  */
 public class Apprentice {
 
-    private String fulname;
+    private String fullname;
     private int age;
     private int phone;
     
@@ -18,17 +18,17 @@ public class Apprentice {
     }
 
     public Apprentice(String fulname, int age, int phone) {
-        this.fulname = fulname;
+        this.fullname = fulname;
         this.age = age;
         this.phone = phone;
     }
 
     public String getFulname() {
-        return fulname;
+        return fullname;
     }
 
     public void setFulname(String fulname) {
-        this.fulname = fulname;
+        this.fullname = fulname;
     }
 
     public int getAge() {
@@ -49,7 +49,7 @@ public class Apprentice {
 
     @Override
     public String toString() {
-        return fulname;
+        return fullname;
     }
     
     
